@@ -53,9 +53,7 @@ public interface JeepSalesController {
 				name= "trim", 
 				allowEmptyValue =false, 
 				required = false,
-				description ="The trim level (i.e, 'Sport')" ),
-		
-		
+				description ="The trim level (i.e, 'Sport')" )		
 		})
 	
 	@GetMapping
