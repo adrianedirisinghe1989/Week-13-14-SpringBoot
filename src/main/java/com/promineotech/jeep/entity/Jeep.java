@@ -13,7 +13,6 @@ import lombok.Setter;
 @NoArgsConstructor
 @AllArgsConstructor
 
-
 public class Jeep implements Comparable<Jeep> {
 	private Long modelPk;
 	private JeepModel modelId;
@@ -26,7 +25,6 @@ public class Jeep implements Comparable<Jeep> {
 	public Long getModelPk() {
 		return modelPk;
 	}
-
 	@Override
 	public int compareTo(Jeep that) {
 		//@formatter :off

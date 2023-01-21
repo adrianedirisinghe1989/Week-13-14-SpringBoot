@@ -55,7 +55,7 @@ class FetchJeepTest extends FetchJeepTestSupport {
 		// Given: a valid model, trim and URI
 			JeepModel model = JeepModel.WRANGLER;
 			String trim = "Sport"; 
-			String uri = String.format("%s?model=%s&trim=%s",getBaseUri(),model,trim);	
+			String uri = String.format("%s?model=%s&trim=%s",getBaseUriForJeeps(),model,trim);	
 			
 		//When: a connection is made to the URI
 		ResponseEntity<List<Jeep>>response=
@@ -86,7 +86,7 @@ class FetchJeepTest extends FetchJeepTestSupport {
 			JeepModel model = JeepModel.WRANGLER;
 			String trim = "Unknown Value"; 
 			String uri = 
-					String.format("%s?model=%s&trim=%s",getBaseUri(),model,trim);
+					String.format("%s?model=%s&trim=%s",getBaseUriForJeeps(),model,trim);
 			
 	
 		//When: a connection is made to the URI
@@ -111,7 +111,7 @@ class FetchJeepTest extends FetchJeepTestSupport {
 			String model, String trim, String reason) {
 	// Given: a valid model, trim and URI
 		String uri = 
-				String.format("%s?model=%s&trim=%s",getBaseUri(),model,trim);	
+				String.format("%s?model=%s&trim=%s",getBaseUriForJeeps(),model,trim);	
 		
 	//When: a connection is made to the URI
 	ResponseEntity<Map<String, Object>>response=
@@ -173,7 +173,7 @@ class FetchJeepTest extends FetchJeepTestSupport {
 			JeepModel model = JeepModel.WRANGLER;
 			String trim = "Invalid"; 
 			String uri = 
-					String.format("%s?model=%s&trim=%s",getBaseUri(),model,trim);
+					String.format("%s?model=%s&trim=%s",getBaseUriForJeeps(),model,trim);
 			
 			doThrow(new RuntimeException("Ouch!")).when(jeepSalesService)
 			.fetchJeeps(model, trim);
